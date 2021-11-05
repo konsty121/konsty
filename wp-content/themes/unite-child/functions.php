@@ -1,8 +1,7 @@
 <?php
 get_template_part('./inc/real-type-taxonomy');
 get_template_part('./inc/real-post-type');
-//get_template_part('./inc/agency-post-type');
-get_template_part('./inc/experts');
+get_template_part('./inc/agency-post-type');
 // ============================================
 add_action('add_meta_boxes', function () {
   add_meta_box('post_expert', 'Агенства', 'post_expert_metabox', array('post', 'houses'), 'side', 'low');
