@@ -1,0 +1,31 @@
+//===============POSTS PAGES
+// generate posts/pages
+wp post generate 
+[--count=<number>] 
+[--post_type=<type>] 
+[--post_status=<status>]        
+[--post_title=<post_title>] 
+[--post_author=<login>] 
+[--post_date=<yyyy-mm-dd-hh-ii-ss>]  
+[--post_date_gmt=<yyyy-mm-dd-hh-ii-ss>] 
+[--post_content] 
+[--max_depth=<number>]
+[--format=<format>]
+
+// create post
+wp post create --post_author=site_owner ./lorem.txt --post_type=houses --post_category='houses' --post_title='Post-1' --post_status=publish
+
+// create page
+wp post create --post_author=site_owner  --post_type=page  --post_title='Как загружается ядро WordPress' --post_name=wp-load --post_status=publish
+
+// Delete all pages
+wp post delete $(wp post list --post_type='page' --format=ids)
+
+// ===============CATEGORYES
+// create category
+wp term create category 'Новости' --slug='news' --description='Новости сайта' 
+[--parent={term-id}] // Родительская категория
+[--porcelain]// Output just the new term id.
+// generate categories
+wp term generate category --count=6 --max_depth=1 
+[--format={format}]

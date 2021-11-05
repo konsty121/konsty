@@ -1,0 +1,88 @@
+/*
+Theme Name: unite-child
+Template: unite
+*/
+
+/* импортируем стили родительской темы */
+@import url("../unite/style.css");
+
+.site-title {
+  font-size: 30px;
+}
+
+.houses-list {
+  position: relative;
+}
+
+.loader {
+  display   : none;
+  position  : absolute;
+  top       : 0;
+  right     : 0;
+  bottom    : 0;
+  left      : 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index   : 1;
+}
+
+.houses-list>.row>div {
+  margin-bottom: 30px;
+}
+
+.houses-list__item {
+  padding   : 15px;
+  box-shadow: 0 0 5px #ccc;
+  transition: .3s;
+}
+
+.houses-list__item:hover {
+  box-shadow: 0 0 15px #ccc;
+}
+
+.houses-list__item h2 {
+  margin-top: 0;
+  font-size : 18px;
+}
+
+.houses-list__price {
+  font-size  : 18px;
+  font-weight: bold;
+}
+
+.footer__logo {
+  text-align : center;
+  color      : #fff;
+  font-size  : 20px;
+  font-weight: bold;
+}
+
+/* sidebar */
+.sidebar-agency-list {
+  margin    : 0 0 30px;
+  padding   : 0;
+  list-style: none;
+
+}
+
+.sidebar-agency-list>li {
+  font-weight: bold;
+  cursor     : pointer;
+}
+
+.sidebar-agency-list>li:hover {
+  color: #54397e;
+}
+
+.sidebar-agency-list>li.current {
+  color          : #54397e;
+  text-decoration: underline;
+}
+
+.sidebar-filter__reset {
+  margin-top: 30px;
+  padding   : 10px 20px;
+  display   : none;
+  color     : #fff;
+  background: #54397e;
+  cursor    : pointer;
+}
