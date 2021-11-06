@@ -1,0 +1,3 @@
+*.txt 
+/wp-admin
+/wp-includes
